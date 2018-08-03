@@ -38,4 +38,7 @@ class Dog
     new_dog
   end
 
+  def find_by_name 
+  end
+
 end
