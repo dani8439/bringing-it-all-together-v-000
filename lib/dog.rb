@@ -30,6 +30,7 @@ class Dog
     DB[:conn].execute(sql)
   end
 
+  # WRONG
   # def self.new_from_db(row)
   #   new_dog = self.new
   #   new_dog.id = row[0]
