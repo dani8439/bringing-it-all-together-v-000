@@ -47,7 +47,10 @@ class Dog
     end.first
   end
 
-  def update 
+  def update
+  end
+
+  def save
   end
 
 end
