@@ -30,13 +30,13 @@ class Dog
     DB[:conn].execute(sql)
   end
 
-  def self.new_from_db(row)
-    new_dog = self.new
-    new_dog.id = row[0]
-    new_dog.name = row[1]
-    new_dog.breed = row[2]
-    new_dog
-  end
+  # def self.new_from_db(row)
+  #   new_dog = self.new
+  #   new_dog.id = row[0]
+  #   new_dog.name = row[1]
+  #   new_dog.breed = row[2]
+  #   new_dog
+  # end
 
   def find_by_name(name)
     sql = <<-SQL
@@ -92,7 +92,7 @@ class Dog
     if !dog.empty?
       dog_data = dog[0]
       dog = Dog.new(id: dog_data[0], name: dog_data[1], breed: dog_data[2])
-    else 
+    else
       dog = self.create(name: name, breed: breed)
     end
     dog
